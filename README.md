@@ -1,30 +1,46 @@
-# Flask-Tutorial
-Einstieg ins Thema Python Flask. Basierend auf dem Referat "Flask"
+# AlarmForge
+AlarmForge ist eine webbasierte Anwendung zur Erstellung und Verwaltung von Alarmschreiben für Einsatzübungen.
+Die Anwendung basiert auf Python und Django und ermöglicht es Alarmschreiben für Übungszenarien zu erstellen und zu bearbeiten. 
+Diese können als PDF exportiert und im Anschluss ausgedruckt werden.
 
-## Run Project:
-Open Terminal (cmd) in Visual Studio Code and run app while python virtual enviroment is activated:
+> **ACHTUNG!** AlarmForge ist ausschließlich für Übungs- und Ausbildungszwecke geeignet!
+
+## Technologie
++ Python3
++ Django
++ HTML/CSS
++ JavaScript
+
+
+## Installation:
+Git-Repo klonen:
 ~~~ bash
-python main.py
+git clone https://github.com/fene296/alarmforge.git
 ~~~
 
-## Setup Project:
+Virtuelle Python Umgebung erstellen:
+~~~ bash
+python -m venv .env
+~~~
 
-### Setup virtual Pyhton Enviroment
-Create virtual Enviroment:
+Virtuelle Python Umgebung aktivieren:
 ~~~ bash
-python -m venv env
+.env\Scripts\activate
 ~~~
-Activate virtual Enviroment:
-~~~ bash
-env\Scripts\activate
-~~~
-Install packages from `requirements.txt`:
+
+Abhängigkeiten installieren:
 ~~~ bash
 pip install -r requirements.txt
 ~~~
-Activate virtual Enviroment:
-~~~ bash
-deactivate
+
+Datenbank vorbereiten
+~~~ bash 
+python alarmforge/manage.py migrate
 ~~~
----
+
+Entwicklungsserver starten
+~~~ bash
+python alarmforge/manage.py runserver
+~~~
+
 
